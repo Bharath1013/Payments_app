@@ -12,7 +12,6 @@ function App() {
 
   return (
     <>
-      <div>Welcome to payments app </div>
     <BrowserRouter>
     <Routes>
       <Route path ="/signup" element ={<Signup />}></Route>
