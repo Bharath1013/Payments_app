@@ -5,7 +5,7 @@ import { SubHeading } from "../components/SubHeading";
 import { InputBox } from "../components/InputBox";
 import { Button } from "../components/Button";
 import { useNavigate } from "react-router-dom";
-require('dotenv').config();
+
 
 export function Update(){
     const [firstName, setFirstName] = useState("");
@@ -46,7 +46,7 @@ export function Update(){
         }} placeholder="123456" label={"Password"} />
         <div className="pt-4">
           <Button onClick={async () => {
-            const response = await axios.put(`${process.env.baseUrl}v1/user/update`, { body:{
+            const response = await axios.put("https://payments-app-psi.vercel.app/v1/user/update", { body:{
               username,
               firstName,
               lastName,
