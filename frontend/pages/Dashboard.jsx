@@ -3,7 +3,7 @@ import { Appbar } from "../components/Appbar"
 import { Balance } from "../components/Balance"
 import { Users } from "../components/Users"
 import axios from 'axios';
-require('dotenv').config();
+
   async function fetchAccountBalance() {
   try {
     
@@ -16,7 +16,7 @@ require('dotenv').config();
     }
 
     // const response = await axios.get('http://localhost:3000/api/v1/account/balance', {
-      const response = await axios.get(`${process.env.baseUrl}api/v1/account/balance`, {
+      const response = await axios.get("https://payments-app-psi.vercel.app/api/v1/account/balance", {
       headers: {
         Authorization: `Bearer ${token}`
       }
