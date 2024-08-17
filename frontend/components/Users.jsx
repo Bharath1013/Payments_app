@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Button } from "./Button"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-require('dotenv').config()
+
 
 export const Users = () => {
     // Replace with backend call
@@ -10,7 +10,7 @@ export const Users = () => {
     const [filter, setFilter] = useState("");
 
     useEffect(() => {
-        axios.get(`${process.env.baseUrl}api/v1/user/bulk?filter=" + filter`, {
+        axios.get("https://payments-app-psi.vercel.app/api/v1/user/bulk?filter="+filter, {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token")
             }})
