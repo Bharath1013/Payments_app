@@ -1,6 +1,7 @@
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import axios from "axios";
 import { useState} from 'react';
+require('dotenv').config();
 
 export const SendMoney = () => {
     const [searchParams] = useSearchParams();
@@ -61,7 +62,7 @@ export const SendMoney = () => {
                     <button onClick={async () => {
                         setsuccess('processing')
                         setisdisabled(true)
-                       try{ await axios.post("http://localhost:3000/api/v1/account/transfer", {
+                       try{ await axios.post(`${process.env.baseUrl}api/v1/account/transfer`, {
                             to: id,
                             amount
                         }, {
