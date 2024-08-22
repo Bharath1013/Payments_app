@@ -44,10 +44,10 @@ export function Transactions(){
             <div className='flex justify-between'>
             <div className='text-black-200 font-bold text-xl pb-4 pl-3 col-span-3'>Transactions History</div>
             <div><button className='text-gray-400 underline pt-1 text-xl pr-3'onClick={handlenavigate}>dashboard</button></div></div>
-{/*             <div> { transactions.map(transaction=>
+            <div> { transactions.map(transaction=>
             <Transactioncard username={transaction.username} amount ={transaction.amount} date={transaction.date}></Transactioncard>)}
-            </div> */}
-            <div> {
+            </div>
+{/*             <div> {
   transactions && transactions.length > 0 ? (
     transactions.map(transaction => (
       <TransactionCard
@@ -61,7 +61,7 @@ export function Transactions(){
       No transactions
     </div>
   )
-} </div>
+} </div> */}
 
             
             </>
