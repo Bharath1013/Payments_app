@@ -42,7 +42,27 @@ const accountSchema = new mongoose.Schema({
     balance: {
         type: Number,
         required: true
-    }
+    },
+    transactions: [{
+        userId: {
+            type: mongoose.Schema.Types.ObjectId, // Reference to User model
+            ref: 'User',
+            required: true
+        },
+        username: {
+            type: String,
+            required: true
+        },
+        transaction: {
+            type: Number,
+            required: true
+        },
+        date:{
+            type:Date,
+            default: Date.now
+        }
+
+    }]
 });
 
 const Account = mongoose.model('Account', accountSchema);
