@@ -47,7 +47,7 @@ export function Transactions(){
             <div> { transactions.map(transaction=>
             <Transactioncard username={transaction.username} amount ={transaction.amount} date={transaction.date}></Transactioncard>)}
             </div>
-{/*             <div> {
+           <div> {
   transactions && transactions.length > 0 ? (
     transactions.map(transaction => (
       <TransactionCard
@@ -61,7 +61,7 @@ export function Transactions(){
       No transactions
     </div>
   )
-} </div> */}
+} </div> 
 
             
             </>
