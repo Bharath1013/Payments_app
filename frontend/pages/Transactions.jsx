@@ -57,9 +57,10 @@ export function Transactions(){
       />
     ))
   ) : (
-    <div style={{ textAlign: 'center', marginTop: '20px' }}>
-      No transactions
-    </div>
+  <div className="text-center mt-5">
+  No transactions
+</div>
+
   )
 } </div> 
 
