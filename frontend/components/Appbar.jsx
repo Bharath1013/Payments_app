@@ -7,6 +7,12 @@ export const Appbar = () => {
             PaymetsApp
         </div>
         <div className="flex">
+        <div className="flex flex-col justify-center underline h-full mr-4"> <button onClick={async ()=>{
+                navigate('/transactions');
+           }
+         }
+            >Transaction History</button> </div>
+
            <div className="flex flex-col justify-center underline h-full mr-4"> <button onClick={async ()=>{
                  localStorage.removeItem('token');
                 await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -14,6 +20,7 @@ export const Appbar = () => {
            }
          }
             >Logout</button> </div>
+
             
             <div className="rounded-full h-12 w-12 bg-slate-200 flex justify-center mt-1 mr-2"> 
 
